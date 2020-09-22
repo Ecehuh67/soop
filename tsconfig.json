@@ -5,7 +5,6 @@
     "sourceMap": true,
     "module": "commonjs",
     "target": "es2016",
-    "jsx": "react",
     "allowSyntheticDefaultImports": false,
     "lib": ["dom"],
     "moduleResolution": "node"

@@ -2,12 +2,11 @@
   "name": "snake-oop",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
     "test": "eslint --config .eslintrc-ts.yml --ext .tsx src/",
-    "server": "nodemon ./server/index.js"
+    "server": "nodemon ./server/server.js"
   },
   "author": "Kirill T.",
   "license": "ISC",
@@ -19,5 +18,12 @@
     "webpack": "4.44.2",
     "webpack-cli": "3.3.12",
     "webpack-dev-server": "3.11.0"
+  },
+  "dependencies": {
+    "axios": "0.20.0",
+    "cors": "2.8.5",
+    "express": "4.17.1",
+    "redux": "4.0.5",
+    "redux-thunk": "2.3.0"
   }
 }

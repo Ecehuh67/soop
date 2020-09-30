@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './src/index.tsx',
@@ -18,19 +18,19 @@ module.exports = {
     open: true,
     watchContentBase: true,
   },
-  //   plugins: [
-  //     new MiniCssExtractPlugin({
-  //       filename: '[name].css',
-  //       chunkFilename: '[id].css',
-  //     }),
-  //   ],
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+    }),
+  ],
   devtool: 'source-map',
   module: {
     rules: [
-      //   {
-      //     test: /style.less$/,
-      //     use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader'],
-      //   },
+      {
+        test: /style.less$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader'],
+      },
       {
         test: /\.(tsx|ts)?$/,
         use: {

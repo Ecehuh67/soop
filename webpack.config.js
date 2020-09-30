@@ -4,6 +4,7 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.tsx',
+  watch: true,
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public'),
@@ -15,6 +16,7 @@ module.exports = {
     contentBase: path.resolve(__dirname, 'public'),
     port: 3000,
     open: true,
+    watchContentBase: true,
   },
   //   plugins: [
   //     new MiniCssExtractPlugin({

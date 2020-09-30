@@ -1,3 +1,3 @@
-const container = document.querySelector('.main-container');
+// const container = document.querySelector('.main-container');
 
-console.log(container);
+// console.log(container);

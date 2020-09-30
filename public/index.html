@@ -4,8 +4,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OOP</title>
   </head>
-  <body>
-    <main class="main-container"></main>
+  <body class="doc">
+    <div class="doc__wrapper html-wrapper">
+      <header class="doc__header">
+        <ul class="doc__header-sorting-panel sorting-panel">
+          <li class="sorting-panel__item">Films</li>
+          <li class="sorting-panel__item">TV Shows</li>
+          <li class="sorting-panel__item">Cartoon</li>
+          <li class="sorting-panel__item">Documentary</li>
+        </ul>
+        <nav class="doc__navigation">
+          <ul class="doc__header-user-bar user-bar">
+            <li class="user-bar__item user-bar__item--watchList"></li>
+            <li class="user-bar__item user-bar__item--serch"></li>
+            <li class="user-bar__item user-bar__item--profile"></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- There will be a SLIDER -->
+      <div class="doc__slider"></div>
+      <!-- END  -->
+
+      <main class="doc__main">
+        <h1 class="doc__head-caption visuaaly-hidden">Welcome to the Bemlix</h1>
+        <ul class="doc__main-categories categories-list">
+          <li class="categories-list__section">
+            <h2>TV SHOWS</h2>
+            <ul class="categories-list__content-container">
+              <li class="categories-list__content-item content-item">
+                <div class="content-item__preview-wrapper">
+                  <img src="#" alt="preview" />
+                </div>
+                <h3 class="content-item__title">TITLE OF FILM</h3>
+                <p class="content-item__data">smth else ....</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </main>
+      <footer class="doc__footer">
+        <ul class="doc__footer-helper helper">
+          <li class="helper__column">
+            <h3>USERS and PArtners</h3>
+            <ul class="helper__inner-wrapper">
+              <li class="helper__item">
+                <a href="#">Link to somewhere</a>
+                <a href="#">Link to somewhere</a>
+              </li>
+            </ul>
+          </li>
+          <li class="helper__column helper__column--right">
+            <h3>JOIN US</h3>
+            <ul class="helper__inner-wrapper">
+              <li class="helper__item">
+                <a href="#">Link to somewhere</a>
+                <a href="#">Link to somewhere</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </footer>
+    </div>
     <script type="text/javascript" src="./bundle.js"></script>
   </body>
 </html>

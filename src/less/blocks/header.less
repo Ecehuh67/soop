@@ -1,4 +1,6 @@
 .doc__header {
+  display: flex;
+
   width: 100%;
   height: 50px;
 
@@ -7,8 +9,126 @@
 }
 
 .logo {
+  margin-right: 40px;
+
   fill: red;
 
   width: 30px;
   height: 30px;
+
+  background-color: green;
+}
+
+.doc__header-sorting-panel {
+  display: flex;
+  align-items: center;
+
+  width: 60%;
+}
+
+.sorting-panel {
+  margin-right: 50px;
+}
+
+.sorting-panel__item {
+  cursor: pointer;
+
+  &:not(:last-of-type) {
+    margin-right: 30px;
+  }
+
+  &:hover {
+    color: #ff4136;
+  }
+}
+
+.doc__navigation {
+  width: 20%;
+}
+
+.doc__header-user-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 100%;
+}
+
+.user-bar__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  min-width: 100px;
+  height: 100%;
+
+  cursor: pointer;
+  &:hover {
+    background-color: white;
+    & > a {
+      color: black;
+    }
+
+    & > div {
+      display: block;
+    }
+  }
+}
+
+.user-bar__item-popup {
+  position: absolute;
+}
+
+.user-bar__item-popup {
+  display: none;
+  top: 50px;
+  right: 0;
+
+  width: 300px;
+
+  background-color: white;
+  color: black;
+}
+
+.user-bar__item-popup--search {
+  top: 0px;
+  right: 0;
+
+  height: 60px;
+
+  font-size: 0;
+}
+
+.user-bar__item-popup-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-sizing: border-box;
+  padding: 10px 20px;
+}
+
+.user-bar__item-button {
+  width: 30px;
+  height: 30px;
+
+  border: none;
+  outline: none;
+}
+
+.user-bar__item-button--cancel {
+  font-size: 20px;
+  color: gray;
+}
+
+.user-bar__item-search-input {
+  width: 180px;
+  height: 40px;
+
+  font-size: 15px;
+  font-weight: 300;
+
+  border: none;
+  outline: none;
 }

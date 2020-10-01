@@ -107,9 +107,44 @@
         </ul>
         <nav class="doc__navigation">
           <ul class="doc__header-user-bar user-bar">
-            <li class="user-bar__item user-bar__item--watchList"></li>
-            <li class="user-bar__item user-bar__item--serch"></li>
-            <li class="user-bar__item user-bar__item--profile"></li>
+            <li class="user-bar__item user-bar__item--watchList">
+              <a href="#">I'm watching</a>
+              <div class="user-bar__item-popup">
+                <ul class="user-bar__toplist toplist">
+                  <li class="toplist__item">Favorite</li>
+                  <li>Bought</li>
+                </ul>
+                <ul class="user-bar__history history">
+                  <p class="history__caption">History</p>
+                  <li class="history__item">
+                    <div class="history__item-container">
+                      <img src="#" alt="preview" />
+                    </div>
+                    <h3 class="history__item-title">TITLE OF FILM</h3>
+                    <p class="history__item-smth">smth else ....</p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="user-bar__item user-bar__item--serch">
+              <a href="#">Search</a>
+              <div class="user-bar__item-popup user-bar__item-popup--search">
+                <div class="user-bar__item-popup-wrapper">
+                  <button class="user-bar__item-button  user-bar__item-button--search" type="button">find</button>
+                  <input class="user-bar__item-search-input" type="text" id="search"></input>
+                  <label class="user-bar__item-search-label" for="search">search</label>
+                  <button class="user-bar__item-button  user-bar__item-button--cancel" type="button"> &times;</button>
+                </div>
+              </div>
+            </li>
+            <li class="user-bar__item user-bar__item--profile">
+              <a href="#">Profile</a>
+              <div class="user-bar__item-popup user-bar__item-popup--profile">
+                <div class="user-bar__item-popup-wrapper">
+                  
+                </div>
+              </div>
+            </li>
           </ul>
         </nav>
       </header>

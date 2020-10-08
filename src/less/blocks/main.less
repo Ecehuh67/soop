@@ -1,0 +1,52 @@
+.doc__main-categories {
+  background-color: #ffffff;
+
+  border: 1px solid black;
+}
+
+.categories-list__section {
+  position: relative;
+}
+
+.categories-list__Caption {
+  margin-bottom: 30px;
+}
+
+.categories-list__content-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.categories-list__content-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 150px;
+  height: 200px;
+
+  border: 1px solid blue;
+
+  &:not(:last-of-type) {
+    margin-right: 20px;
+  }
+}
+
+.content-item__preview-wrapper {
+  display: flex;
+}
+
+.categories-list__section-button {
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+
+.categories-list__section-button--back {
+  right: 80px;
+}

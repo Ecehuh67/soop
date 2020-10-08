@@ -1,4 +1,5 @@
 import './less/style.less';
+import Api from './api'
 
 const leftButton = document.querySelector('.top-sleder__button--left');
 const rightButton = document.querySelector('.top-sleder__button--right');
@@ -42,3 +43,9 @@ rightButton.addEventListener('click', () => {
   changeSlide(images, 'top-sleder__item--active');
   changeSlide(toggles, 'top-slider__toggle-item--active');
 });
+
+const api = new Api();
+api.getGenres().then((data) => console.log(data))
+
+
+let tr = true

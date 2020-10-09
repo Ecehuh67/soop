@@ -1,17 +1,39 @@
-// example a request https://api.themoviedb.org/3/movie/550?api_key=aaf90be5b4a498eeba973a317099f717
-
-const API_KEY = '?api_key=aaf90be5b4a498eeba973a317099f717';
-const ADDRESS = 'https://api.themoviedb.org/3'
+import { API_KEY, ADDRESS } from './utils/consts';
 
 export default class Api {
   constructor() {
-    this.apiKey = API_KEY;
-    this.address = ADDRESS;
-    this.genres =[]
-    // this.getGenres = this.getGenres.bind(this)
+    this._apiKey = API_KEY;
+    this._address = ADDRESS;
+    this._films = null;
   }
 
   getGenres() {
-    return fetch(`${this.address}/genre/movie/list${API_KEY}`).then((res) => res.json()).then((data) => this.genres = [...data.genres]);
+    return fetch(`${this._address}/genre/movie/list${this._apiKey}`)
+      .then((res) => res.json())
+      .then((data) => data.genres);
+  }
+
+  getFilms() {
+    return fetch(`${this._address}/discover/movie${this._apiKey}`)
+      .then((res) => res.json())
+      .then((data) => {
+        this._movies = data.results;
+
+        return this.getGenres().then((genres) => {
+          this._movies.forEach((el) => {
+            const genreList = [];
+            el.genre_ids.forEach((id) => {
+              genres.forEach((gen) => {
+                if (gen.id === id) {
+                  genreList.push(gen.name);
+                }
+              });
+            });
+
+            el.genre_ids = genreList;
+          });
+          return this._movies;
+        });
+      });
   }
 }

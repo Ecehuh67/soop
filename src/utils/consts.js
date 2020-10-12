@@ -4,10 +4,17 @@ export const ADDRESS = 'https://api.themoviedb.org/3';
 
 export const HIDDEN_CLASS = `visually-hidden`;
 
+export const RenderPosition = {
+  AFTERBEGIN: `afterbegin`,
+  BEFOREEND: `beforeend`,
+};
+
 export const createElement = (template) => {
   const newElement = document.createElement('div');
 
   newElement.innerHTML = template;
+
+  console.log(newElement);
 
   return newElement.firstChild;
 };
@@ -24,5 +31,16 @@ export const replaceElements = (newElement, oldElement) => {
 
     newElement.scrollLeft = scrollLeft;
     newElement.scrollTop = scrollTop;
+  }
+};
+
+export const render = (container, component, place) => {
+  console.log(component);
+  switch (place) {
+    case RenderPosition.BEFOREEND:
+      container.append(component.getElement());
+      break;
+    case RenderPosition.AFTERBEGIN:
+      container.prepend(component.getElement());
   }
 };

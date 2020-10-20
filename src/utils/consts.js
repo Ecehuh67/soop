@@ -14,9 +14,7 @@ export const createElement = (template) => {
 
   newElement.innerHTML = template;
 
-  console.log(newElement);
-
-  return newElement.firstChild;
+  return newElement.children[0];
 };
 
 export const replaceElements = (newElement, oldElement) => {
@@ -35,7 +33,6 @@ export const replaceElements = (newElement, oldElement) => {
 };
 
 export const render = (container, component, place) => {
-  console.log(component);
   switch (place) {
     case RenderPosition.BEFOREEND:
       container.append(component.getElement());

@@ -8,7 +8,6 @@ export default class Sort extends AbstractComponent {
   }
 
   getTemplate() {
-    console.log(createSortTempalte());
     return createSortTempalte();
   }
 }

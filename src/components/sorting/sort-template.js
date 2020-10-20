@@ -8,8 +8,11 @@ export const SortTypes = {
 export const createSortTempalte = () => {
   const sortList = Object.keys(SortTypes)
     .map((type) => `<li class="sorting-panel__item">${SortTypes[type]}</li>`)
-    .join('\n');
+    .join('');
+
   return `
-    <ul class="doc__header-sorting-panel sorting-panel"></ul>
+    <ul class="doc__header-sorting-panel sorting-panel">
+      ${sortList}
+    </ul>
     `;
 };

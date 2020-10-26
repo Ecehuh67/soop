@@ -42,6 +42,22 @@
   }
 }
 
+.filter-panel__item {
+  cursor: pointer;
+
+  &:not(:last-of-type) {
+    margin-right: 30px;
+  }
+
+  &:hover {
+    color: #ff4136;
+  }
+}
+
+.filter-panel__item--active {
+  color: #ff4136;
+}
+
 .doc__navigation {
   width: 20%;
 }

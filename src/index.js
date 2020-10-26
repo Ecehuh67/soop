@@ -1,5 +1,5 @@
 import './less/style.less';
-import Filters from './components/filters/filters';
+import FiltersController from './controllers/filter';
 import { render, RenderPosition } from './utils/consts';
 
 // const leftButton = document.querySelector('.top-sleder__button--left');
@@ -45,7 +45,6 @@ import { render, RenderPosition } from './utils/consts';
 //   changeSlide(toggles, 'top-slider__toggle-item--active');
 // });
 
-const headerContainer = document.querySelector('.doc__header');
-const filterElement = new Filters();
-
-render(headerContainer, filterElement, RenderPosition.AFTERBEGIN);
+// const headerContainer = document.querySelector('.doc__header');
+const filtersController = new FiltersController();
+filtersController.render();

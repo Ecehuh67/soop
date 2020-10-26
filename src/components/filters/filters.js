@@ -11,7 +11,17 @@ export default class Filters extends AbstractComponent {
   }
 
   setFilterChangeHandler(handler) {
-    console.log('Filter component');
-    handler();
+    this.getElement().addEventListener('click', ({ target }) => {
+      handler(target.dataset.filterType);
+    });
+  }
+
+  setActive(oldFilter, newFilter) {
+    this.getElement()
+      .querySelector(`#filter__${oldFilter}`)
+      .classList.remove(`filter-panel__item--active`);
+    this.getElement()
+      .querySelector(`#filter__${newFilter}`)
+      .classList.add(`filter-panel__item--active`);
   }
 }

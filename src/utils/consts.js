@@ -11,7 +11,7 @@ export const RenderPosition = {
 
 export const FilterTypes = {
   FILMS: 'Films',
-  TV_SHOWS: 'TV show',
+  TV_SHOWS: 'TV-shows',
   CARTOONS: 'Cartoons',
   DOCUMENTARY: 'Documentary',
 };

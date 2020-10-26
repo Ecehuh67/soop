@@ -9,6 +9,13 @@ export const RenderPosition = {
   BEFOREEND: `beforeend`,
 };
 
+export const FilterTypes = {
+  FILMS: 'Films',
+  TV_SHOWS: 'TV show',
+  CARTOONS: 'Cartoons',
+  DOCUMENTARY: 'Documentary',
+};
+
 export const createElement = (template) => {
   const newElement = document.createElement('div');
 

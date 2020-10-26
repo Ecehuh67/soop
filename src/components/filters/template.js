@@ -1,10 +1,10 @@
-import { FiltersTypes } from '../../utils/consts';
+import { FilterTypes, HIDDEN_CLASS } from '../../utils/consts';
 
-export const createSortTemplate = () => {
+export const createFilterTemplate = () => {
   return `<ul class="doc__header-sorting-panel sorting-panel">
-    <li class="sorting-panel__item" data-filter-type="${FiltersTypes.FILMS}" id="${FiltersTypes.FILMS}">${FiltersTypes.FILMS}</li>
-    <li class="sorting-panel__item" data-filter-type="${FiltersTypes.FILMS}" id="${FiltersTypes.FILMS}">${FiltersTypes.TV_SHOWS}</li>
-    <li class="sorting-panel__item" data-filter-type="${FiltersTypes.CARTOONS}" id="${FiltersTypes.CARTOONS}">${FiltersTypes.CARTOONS}</li>
-    <li class="sorting-panel__item data-filter-type="${FiltersTypes.DOCUMENTARY}" id="${FiltersTypes.DOCUMENTARY}">${FiltersTypes.DOCUMENTARY}</li>
+    <li class="sorting-panel__item" data-filter-type="${FilterTypes.FILMS}" id="${FilterTypes.FILMS}">${FilterTypes.FILMS}</li>
+    <li class="sorting-panel__item" data-filter-type="${FilterTypes.FILMS}" id="${FilterTypes.FILMS}">${FilterTypes.TV_SHOWS}</li>
+    <li class="sorting-panel__item" data-filter-type="${FilterTypes.CARTOONS}" id="${FilterTypes.CARTOONS}">${FilterTypes.CARTOONS}</li>
+    <li class="sorting-panel__item data-filter-type="${FilterTypes.DOCUMENTARY}" id="${FilterTypes.DOCUMENTARY}">${FilterTypes.DOCUMENTARY}</li>
   </ul>`;
 };

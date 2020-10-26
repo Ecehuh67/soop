@@ -1,5 +1,5 @@
 import './less/style.less';
-import Sort from './components/sorting/sort';
+import Filters from './components/filters/filters';
 import { render, RenderPosition } from './utils/consts';
 
 // const leftButton = document.querySelector('.top-sleder__button--left');
@@ -46,6 +46,6 @@ import { render, RenderPosition } from './utils/consts';
 // });
 
 const headerContainer = document.querySelector('.doc__header');
-const sortElement = new Sort();
+const filterElement = new Filters();
 
-render(headerContainer, sortElement, RenderPosition.AFTERBEGIN);
+render(headerContainer, filterElement, RenderPosition.AFTERBEGIN);
